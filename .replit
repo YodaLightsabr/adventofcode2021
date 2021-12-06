@@ -1,1 +1,2 @@
+#run = "clear && node index.js"
 run = "clear && node index.js"

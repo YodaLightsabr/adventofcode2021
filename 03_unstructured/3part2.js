@@ -24,7 +24,7 @@ let eachCount = vertical.map((vert, i) => {
   mosts += (most)
   console.log({count1,count0,most})
   activenums.forEach((active, inde) => {
-    if (active[i] !== most) activenums.splice(index, 1);
+    if (active[i] !== most) activenums.splice(activenums.indexOf(active), 1);
   })
 });
 console.log(activenums);

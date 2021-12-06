@@ -3,12 +3,13 @@ import fetch from 'node-fetch';
 import fs from 'fs';
 
 export const logger = new Stump(['Debug']);
-export const day = 5;
+export const day = 6;
+export const inputFile = 'input.txt';
 
 export async function input () {
   let cached;
   try {
-    cached = fs.readFileSync((day + '').padStart(2, '0') + '/input.txt', 'utf8');
+    cached = fs.readFileSync((day + '').padStart(2, '0') + '/' + inputFile, 'utf8');
   } catch (err) {}
   if (cached) return cached;
   const raw = await fetch(`https://adventofcode.com/2021/day/${day}/input`, {
